@@ -37,7 +37,10 @@ namespace WizNinSam.Models
         {
             int dmg = Strength * 3;
             target.Health -= dmg;
-            Console.WriteLine($"{Name} attacked {target.Name} fro {dmg} damage!");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine($"{Name} attacked {target.Name} for {dmg} damage!");
+            Console.ForegroundColor = ConsoleColor.White;
+            
             return target.Health;
         }
     }
