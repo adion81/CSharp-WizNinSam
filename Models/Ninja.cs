@@ -17,13 +17,19 @@ namespace WizNinSam.Models
         {
             int dmg = 5 * Dexterity;
             target.Health -= dmg;
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine($"{Name} tornado kicked {target.Name} for {dmg} damage");
             Random extraDmg = new Random();
+            
             if(extraDmg.Next(1,101) <= 20)
             {
                 target.Health -= 20;
+                Console.BackgroundColor = ConsoleColor.DarkRed;
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine($"{target.Name} got an extra something something in damage from {Name}");
+                
             }
+            Console.ResetColor();
             return target.Health;
         }
 

@@ -12,6 +12,8 @@ namespace WizNinSam
             Samurai me = new Samurai("Benny Bob");
             me.Attack(Adrien);
             me.Meditate();
+            Ninja Nibbles = new Ninja("Mr. Nibbles");
+            Nibbles.Attack(me);
         }
     }
 }
